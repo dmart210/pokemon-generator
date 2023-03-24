@@ -6,6 +6,5 @@ This is my first project working with APIS and implementing the data with html a
 The CSS might be barebone but its can only get better from here 😊
 #
 
-#Author
+Author
 Dariel Martinez
-#
