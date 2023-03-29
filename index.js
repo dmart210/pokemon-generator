@@ -19,13 +19,16 @@ function addSpriteToPage(sprite){
 
 document.addEventListener("DOMContentLoaded", ()=>{
     let button = document.getElementById("submit-button");
-    const arr = new Array();
     const pokeLink = "https://pokeapi.co/api/v2/pokemon/"
-    button.addEventListener("click", async ()=>{
+    button.addEventListener( "click", async ()=>{
         let pokeInput = document.getElementById("name-input").value;
+        if (!pokeInput) {
+            alert("Nothing Found!");
+        }
         pokeInput = pokeInput.toLowerCase();
         console.log(pokeInput);
         await callPokeApi(pokeLink + pokeInput);
+        document.getElementById("name-input").value = "";
     })
 
 });
